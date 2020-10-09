@@ -40,6 +40,9 @@ def page_login(request):
         
         return render_template(temp_memo_login, {'msg':'Wrong form.','form': form})
     else:
+        username = get_user(request)
+        if username is not None:
+            return redirect('memos')
         form = LoginForm()
         return render_template(temp_memo_login, {'form': form})
 
