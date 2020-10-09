@@ -1,9 +1,8 @@
 FROM ubuntu:18.04
 RUN useradd -m -d /home/user -s /bin/bash -u 1000 user
 RUN apt-get update
-RUN apt-get install -y --no-install-recommends python3-pip ruby ruby-dev
+RUN apt-get install -y --no-install-recommends python3-pip
 RUN apt-get install -y --no-install-recommends supervisor 
-RUN gem install goliath -v 1.0.6
 
 COPY ./app /app
 
