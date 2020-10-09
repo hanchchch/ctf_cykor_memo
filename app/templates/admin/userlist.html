@@ -1,0 +1,12 @@
+<div class="card">
+    <form method="post">
+        <input name="name" type="text"/>
+    </form>
+</div>
+{% if user_list %}
+    {% for user in user_list %}
+        <div class="card">
+            {{ user.name }}
+        </div>
+    {% endfor %}
+{% endif %}

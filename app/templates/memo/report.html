@@ -1,0 +1,12 @@
+<div class="card">
+    <form class="memo_form" action="/memo/report" method="post">
+        please report the url if you find out something wrong.
+        {% if msg %}
+        <div class="alert alert-danger">
+            {{ msg }}
+        </div>
+        {% endif %}
+        {{ form }}
+        <input type="submit" class="btn btn-primary" value="submit"/>
+    </form>
+</div>
