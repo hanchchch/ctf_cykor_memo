@@ -14,6 +14,7 @@ COPY ./requirements.txt /app
 COPY ./util/supervisord.conf /etc/supervisor/conf.d/
 COPY ./util/haproxy /home/haproxy/
 COPY ./util/haproxy.cfg /home/haproxy/
+RUN touch /app/db.sqlite3
 
 RUN pip3 install -r /app/requirements.txt
 
@@ -24,4 +25,6 @@ RUN chown haproxy:haproxy /home/haproxy/ /home/haproxy/haproxy.cfg /home/haproxy
 
 EXPOSE 8080
 WORKDIR /app
+RUN python3 manage.py makemigrations
+RUN python3 manage.py migrate
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]

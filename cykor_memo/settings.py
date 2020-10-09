@@ -6,7 +6,7 @@ SECRET_KEY = 'KOREA{flag}'
 SESSION_TIME = 6000
 DOMAIN = '127.0.0.1:8000'
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 

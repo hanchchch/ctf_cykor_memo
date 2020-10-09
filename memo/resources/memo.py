@@ -21,7 +21,7 @@ def new_memo(title, content, username):
         return '^([a-z]|[0-9])+$'
     name = db.get(User, {'name':username})
     idx = len(get_memo_list(username))
-    db.insert({'index':idx, 'title':title, 'content':content, 'name':name})
+    db.insert(Memo, {'index':idx, 'title':title, 'content':content, 'name':name})
     return SUCCESS
 
 def get_memo_list(username):
