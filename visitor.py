@@ -5,20 +5,18 @@ import sqlite3
 import requests
 
 conn = sqlite3.connect('/app/db.sqlite3')
-SLEEP_TIME = 2
-length = 0
+curs = conn.cursor()
+SLEEP_TIME = 0.2
 
 def main():
     run_loop()
 
-def check_report():
-    curs = conn.cursor()
+def check_report(length):
     curs.execute('SELECT * FROM admin_report')
     reports = curs.fetchall()
-    curs.close()
     if length != len(reports):
         length = len(reports)
-        return reports[length-1][1]
+        return [reports[length-1][1], length]
     else:
         return False
     
@@ -30,11 +28,14 @@ def visit(url):
     print(res.text)
 
 def run_loop():
+    length = 0
     while True:
         try:
-            url = check_report()
+            print('check')
+            url = check_report(length)
             if url:
-                visit(url)
+                visit(url[0])
+                length = url[1]
         except Exception:
             pass
         time.sleep(SLEEP_TIME)
