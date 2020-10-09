@@ -3,7 +3,7 @@ from django.db import models
 from memo.models import User
 
 class Admin(models.Model):
-    name = models.ForeignKey(User, on_delete=models.CASCADE)
+    name = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
 
 class Report(models.Model):
     index = models.IntegerField(primary_key=True)

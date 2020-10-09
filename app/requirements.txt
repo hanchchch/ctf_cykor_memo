@@ -1,3 +1,5 @@
 django
 pyjwt
-meinheld
+gunicorn==20.0.0
+gevent
+requests
