@@ -1,20 +1,15 @@
 FROM ubuntu:18.04
 RUN useradd -m -d /home/user -s /bin/bash -u 1000 user
 RUN apt-get update
-RUN apt-get install -y --no-install-recommends python3-pip 
+RUN apt-get install -y --no-install-recommends python3-pip ruby ruby-dev
 RUN apt-get install -y --no-install-recommends supervisor 
+RUN gem install goliath -v 1.0.6
 
-COPY ./cykor_memo /app/cykor_memo
-COPY ./memo /app/memo
-COPY ./admin /app/admin
-COPY ./templates /app/templates
-COPY ./manage.py /app
-COPY ./requirements.txt /app
+COPY ./app /app
 
 COPY ./util/supervisord.conf /etc/supervisor/conf.d/
 COPY ./util/haproxy /home/haproxy/
 COPY ./util/haproxy.cfg /home/haproxy/
-RUN touch /app/db.sqlite3
 
 RUN pip3 install -r /app/requirements.txt
 
