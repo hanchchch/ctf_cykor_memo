@@ -6,6 +6,7 @@ RUN apt-get install -y --no-install-recommends python3-pip python3-wheel\
 
 COPY ./app /app
 
+COPY ./requirements.txt /app/
 COPY ./util/supervisord.conf /etc/supervisor/conf.d/
 COPY ./util/haproxy /home/haproxy/
 COPY ./util/haproxy.cfg /home/haproxy/
