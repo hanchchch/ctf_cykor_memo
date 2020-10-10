@@ -3,7 +3,6 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'KOREA{flag}'
-SESSION_TIME = 6000
 DOMAIN = '127.0.0.1:8080'
 
 DEBUG = False

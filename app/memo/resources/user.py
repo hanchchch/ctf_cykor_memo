@@ -1,4 +1,3 @@
-import hashlib
 import jwt
 import time
 
@@ -6,7 +5,7 @@ from django import forms
 
 from memo.models import User
 
-from cykor_memo.settings import SECRET_KEY, SESSION_TIME
+from cykor_memo.settings import SECRET_KEY
 from cykor_memo.common import check_safeline, db, sha256, SUCCESS
 
 class LoginForm(forms.Form):
@@ -32,7 +31,6 @@ def get_token(username, password):
             {
                 'username':user.name,
                 'iat':round(time.time()),
-                'exp':round(time.time()+SESSION_TIME)
             }, SECRET_KEY).decode('utf-8')
 
 def get_user(request):

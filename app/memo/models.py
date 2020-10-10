@@ -7,5 +7,5 @@ class User(models.Model):
 class Memo(models.Model):
     index = models.IntegerField()
     title = models.CharField(max_length=30)
-    content = models.CharField(max_length=100)
+    content = models.CharField(max_length=500)
     name = models.ForeignKey(User, on_delete=models.CASCADE)

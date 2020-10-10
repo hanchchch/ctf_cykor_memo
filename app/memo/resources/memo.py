@@ -1,17 +1,14 @@
-import hashlib
-import jwt
 import time
 
 from django import forms
 
 from memo.models import Memo, User
 
-from cykor_memo.settings import SECRET_KEY, SESSION_TIME
-from cykor_memo.common import check_safeline, check_safecontent, db, sha256, SUCCESS
+from cykor_memo.common import check_safeline, check_safecontent, db, SUCCESS
 
 class MemoForm(forms.Form):
     title = forms.CharField(max_length=30)
-    content = forms.CharField(max_length=100)
+    content = forms.CharField(max_length=500)
     # TODO filtering
 
 def new_memo(title, content, username):
