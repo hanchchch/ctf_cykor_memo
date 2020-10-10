@@ -6,12 +6,11 @@ RUN apt-get install -y --no-install-recommends python3-pip python3-wheel\
 
 COPY ./app /app
 
-COPY ./requirements.txt /app/
+COPY ./util/requirements.txt /app/
 COPY ./util/supervisord.conf /etc/supervisor/conf.d/
 COPY ./util/haproxy /home/haproxy/
 COPY ./util/haproxy.cfg /home/haproxy/
-COPY ./visitor.py /home/visitor/visitor.py
-
+COPY ./util/visitor.py /home/visitor/visitor.py
 COPY ./util/init_db.py /app/init_db.py
 
 RUN pip3 install -U pip setuptools
