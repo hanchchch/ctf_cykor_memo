@@ -2,7 +2,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'KOREA{smu99l3_th3_4dm1ns_r3qu35t}'
+SECRET_KEY = 'KOREA{k33p_c4lm_4nd_smu99l3_th3_4dm1ns_r3qu35t}'
 DOMAIN = '127.0.0.1:8080'
 
 DEBUG = False

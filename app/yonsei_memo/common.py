@@ -42,7 +42,6 @@ def check_safeline(string):
 def check_safecontent(string):
     regex = re.compile(r'^([a-z]|[A-Z]|\d|\s|\/|\:|\-|\_|\.|\,|\*|\=)+$')
     matchobj = regex.search(string)
-    return True
     if matchobj is None:
         return False
     elif matchobj.group() != string:
