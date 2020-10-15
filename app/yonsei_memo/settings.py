@@ -18,7 +18,7 @@ MIDDLEWARE = [
 
 ]
 
-ROOT_URLCONF = 'cykor_memo.urls'
+ROOT_URLCONF = 'yonsei_memo.urls'
 
 TEMPLATES = [
     {

@@ -2,8 +2,8 @@ from django import forms
 
 from admin.models import Admin
 from memo.models import User
-from cykor_memo.common import db
-from cykor_memo.common import SUCCESS
+from yonsei_memo.common import db
+from yonsei_memo.common import SUCCESS
 
 
 def isAdmin(username):
