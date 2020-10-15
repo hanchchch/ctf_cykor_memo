@@ -5,7 +5,7 @@ from memo.models import User, Memo
 from memo.resources.user import get_user, get_token, register_user, LoginForm
 from memo.resources.memo import get_memo_list, get_memo, new_memo, MemoForm
 from memo.resources.report import ReportForm, new_report
-from cykor_memo.common import SUCCESS, temp_memo_login, temp_memo_memo, temp_memo_memolist, temp_memo_report, render_template
+from yonsei_memo.common import SUCCESS, temp_memo_login, temp_memo_memo, temp_memo_memolist, temp_memo_report, render_template
 
 def page_login(request):
     if request.method == 'POST':

@@ -2,7 +2,7 @@ from django import forms
 
 from admin.models import Report
 from memo.models import User
-from cykor_memo.common import db,  SUCCESS, check_url
+from yonsei_memo.common import db,  SUCCESS, check_url
 
 class ReportForm(forms.Form):
     url = forms.CharField(max_length=30)

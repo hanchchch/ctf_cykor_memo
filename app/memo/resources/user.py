@@ -5,8 +5,8 @@ from django import forms
 
 from memo.models import User
 
-from cykor_memo.settings import SECRET_KEY
-from cykor_memo.common import check_safeline, db, sha256, SUCCESS
+from yonsei_memo.settings import SECRET_KEY
+from yonsei_memo.common import check_safeline, db, sha256, SUCCESS
 
 class LoginForm(forms.Form):
     username = forms.CharField(max_length=30)

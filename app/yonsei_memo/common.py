@@ -5,7 +5,7 @@ from urllib.parse import urlparse
 from django.template import Template, Context
 from django.http import HttpResponse
 
-from cykor_memo.settings import DOMAIN
+from yonsei_memo.settings import DOMAIN
 
 SHA256_DIGEST_LEN = 64
 SUCCESS = 'SUCCESS'

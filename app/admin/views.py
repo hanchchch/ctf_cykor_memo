@@ -1,6 +1,6 @@
 from django.shortcuts import redirect
 
-from cykor_memo.common import SUCCESS, temp_admin_userlist, render_template
+from yonsei_memo.common import SUCCESS, temp_admin_userlist, render_template
 
 from memo.resources.user import get_user
 from admin.resources.users import get_user_list, isAdmin

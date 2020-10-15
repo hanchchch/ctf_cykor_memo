@@ -4,7 +4,7 @@ from django import forms
 
 from memo.models import Memo, User
 
-from cykor_memo.common import check_safeline, check_safecontent, db, SUCCESS
+from yonsei_memo.common import check_safeline, check_safecontent, db, SUCCESS
 
 class MemoForm(forms.Form):
     title = forms.CharField(max_length=30)
