@@ -5,8 +5,7 @@ from memo.models import User
 from yonsei_memo.common import db,  SUCCESS, check_url
 
 class ReportForm(forms.Form):
-    url = forms.CharField(max_length=30)
-    # TODO filtering
+    url = forms.CharField(max_length=100)
 
 def new_report(url, username):
     if check_url(url) is False:

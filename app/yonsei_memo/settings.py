@@ -2,8 +2,8 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'KOREA{k33p_c4lm_4nd_smu99l3_th3_4dm1ns_r3qu35t}'
-DOMAIN = '127.0.0.1:8080'
+SECRET_KEY = 'KOREA{th4t_w4snt_r3a1_h0st_n4m3_4nd_th4t_w4snt_re4l_t3mp1at3}'
+HOSTNAME = '211.217.69.153'
 
 DEBUG = False
 

@@ -11,7 +11,6 @@ from yonsei_memo.common import check_safeline, db, sha256, SUCCESS
 class LoginForm(forms.Form):
     username = forms.CharField(max_length=30)
     password = forms.CharField()
-    # TODO filtering
 
 def register_user(username, password):
     if check_safeline(username) is False:

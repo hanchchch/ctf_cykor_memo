@@ -2,4 +2,4 @@ django
 pyjwt
 gunicorn==20.0.0
 gevent
-requests
+requests==2.23.0

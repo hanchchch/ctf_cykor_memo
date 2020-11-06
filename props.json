@@ -1,0 +1,7 @@
+{
+    "name": "Yonsei Memo",
+    "description": "My Yonsei friend made a website for making memos! He's bragging about how safe it is, saying it's the safest in the world... Can you check if it's true?",
+    "category": "WEB",
+    "flag": "KOREA{th4t_w4snt_r3a1_h0st_n4m3_4nd_th4t_w4snt_re4l_t3mp1at3}",
+    "files": ["yonsei_memo.tar.gz"]
+}

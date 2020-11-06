@@ -9,7 +9,6 @@ from yonsei_memo.common import check_safeline, check_safecontent, db, SUCCESS
 class MemoForm(forms.Form):
     title = forms.CharField(max_length=30)
     content = forms.CharField(max_length=500)
-    # TODO filtering
 
 def new_memo(title, content, username):
     if check_safeline(title) is False:

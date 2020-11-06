@@ -1,5 +1,4 @@
 FROM ubuntu:18.04
-RUN useradd -m -d /home/user -s /bin/bash -u 1000 user
 RUN apt-get update
 RUN apt-get install -y --no-install-recommends python3-pip python3-wheel\
     && apt-get install -y --no-install-recommends supervisor 

@@ -5,7 +5,7 @@ from urllib.parse import urlparse
 from django.template import Template, Context
 from django.http import HttpResponse
 
-from yonsei_memo.settings import DOMAIN
+from yonsei_memo.settings import HOSTNAME
 
 SHA256_DIGEST_LEN = 64
 SUCCESS = 'SUCCESS'
@@ -52,9 +52,8 @@ def check_safecontent(string):
 def check_url(url):
     o = urlparse(url)
     if o.scheme != 'http':
-        if o.scheme != 'https':
-            return False
-    if o.netloc != DOMAIN:
+        return False
+    if o.hostname != HOSTNAME:
         return False
     return True
 
